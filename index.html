@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div class="column half-width">
+    {% include img.html src="53764_mouth_sm.png" class="category-icon" %}
+    <h2 class="category-heading">Re: People</h2>
+
+    <ul class="post-list">
+      {% for post in site.posts %}
+      {% if post.category == "humans" %}
+        <li>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+        </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="column half-width">
+    {% include img.html src="55594_morse_regist.png" class="category-icon morse" %}
+    <h2 class="category-heading">Re: Computers</h2>
+
+    <ul class="post-list">
+      {% for post in site.posts %}
+      {% if post.category == "computers" %}
+        <li>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+        </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+</div>  

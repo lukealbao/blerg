@@ -1,0 +1,322 @@
+/** ==================== **
+**       Layout          **
+**  ==================== */
+
+/**
+ * Site header
+ */
+.site-header {
+    border-top: 5px solid $grey-color-dark;
+    border-bottom: 1px solid $grey-color-light;
+    min-height: 56px;
+
+    // Positioning context for the mobile navigation icon
+    position: relative;
+}
+
+.site-title {
+    font-size: 30px;
+    font-family: $base-font-family;
+    line-height: 56px;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    float: left;
+
+    &,
+    &:visited {
+        color: $grey-color-dark;
+    }
+    
+    &:hover {
+    color: $highlight-color;
+    transition: color 1.5s;
+    text-decoration: none;
+    }
+    
+    span {
+    color: $grey-color-dark !important;
+    }
+
+
+}
+
+.site-nav {
+    float: right;
+    line-height: 56px;
+
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color: $text-color;
+        line-height: $base-line-height;
+
+        // Gaps between nav items, but not on the first one
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+
+    @include media-query($on-palm) {
+        position: absolute;
+        top: 9px;
+        right: 30px;
+        background-color: $background-color;
+        border: 1px solid $grey-color-light;
+        border-radius: 5px;
+        text-align: right;
+
+        .menu-icon {
+            display: block;
+            float: right;
+            width: 36px;
+            height: 26px;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;
+
+            > svg {
+                width: 18px;
+                height: 15px;
+
+                path {
+                    fill: $grey-color-dark;
+                }
+            }
+        }
+
+        .trigger {
+            clear: both;
+            display: none;
+        }
+
+        &:hover .trigger {
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .page-link {
+            display: block;
+            padding: 5px 10px;
+        }
+    }
+}
+
+
+
+/**
+ * Columns 
+ */
+.column {
+    float: left;
+}
+
+.half-width {
+    width: 50%;
+}
+
+img.category-icon {
+    margin: 10px auto;
+    display: block;
+}
+
+img.morse { /* Hack */
+    margin-bottom: 50px;
+    position: relative;
+    top: 30px;
+}
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+    border-top: 1px solid $grey-color-light;
+    padding: $spacing-unit 0;
+}
+
+.footer-heading {
+    font-size: 18px;
+    margin-bottom: $spacing-unit / 2;
+}
+
+.contact-list,
+.social-media-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.footer-col-wrapper {
+    font-size: 15px;
+    color: $grey-color;
+    margin-left: -$spacing-unit / 2;
+    @extend %clearfix;
+}
+
+.footer-col {
+    float: left;
+    margin-bottom: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+}
+
+.footer-col-1 {
+    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+    width:         calc(35% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(20% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+    width:         calc(45% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-laptop) {
+    .footer-col-1,
+    .footer-col-2 {
+        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+        width:         calc(50% - (#{$spacing-unit} / 2));
+    }
+
+    .footer-col-3 {
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+@include media-query($on-palm) {
+    .footer-col {
+        float: none;
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+
+
+/**
+ * Page content
+ */
+.page-content {
+    padding: $spacing-unit 0;
+}
+
+.category-heading {
+    font-size: 24px;
+    font-family: "Josefin Slab";
+    letter-spacing: 1px;
+    display: block;
+    text-align:center;
+}
+
+.post-list {
+    margin-left: 1em;
+    list-style: none;
+
+    > li h2 {
+	margin-bottom: 0px;
+
+	&:before {
+	    content: "";
+	    font-size: 0px;
+	    border: 3px solid transparent;
+	    border-left: 9px solid #321;
+	    position: relative;
+	    vertical-align: middle;
+	}
+    }
+}
+
+.post-meta {
+    font-size: $tiny-font-size;
+    font-family: $sans;
+    color: $grey-color;
+}
+
+a.post-link {
+    font-family: "Josefin Slab";
+    display: inline;
+    font-size: 20px;
+    color: #321;
+
+    &:hover {
+	color: $brand-color;
+	transition: color 0.25s;
+    }
+}
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: 45px;
+    line-height: 2.5em;
+
+    @include media-query($on-laptop) {
+        font-size: 39px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+
+    p {
+	width: 640px;
+	padding-right: 34px;
+    }
+
+    blockquote p {
+	width: 570px;
+	line-height: 1.25em;
+    }
+
+    aside {
+	font-family: Josefin Slab;
+	width: 200px;
+	position: absolute;
+	margin-top: 0.5em;
+	line-height: 1.4em;
+	right: 1em;
+	font-size: $tiny-font-size;
+	color: $grey-color;
+	border-bottom: dotted 1px;
+	border-top: dotted 1px;
+	padding: 5px;
+	
+    }
+	
+}
