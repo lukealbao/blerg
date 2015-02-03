@@ -114,6 +114,11 @@
 
 .half-width {
     width: 50%;
+
+    @include media-query($on-palm) {
+        width: 100%;
+        float: none;
+    }
 }
 
 img.category-icon {
@@ -217,6 +222,7 @@ img.morse { /* Hack */
     margin-left: 1em;
     list-style: none;
 
+
     > li h2 {
 	margin-bottom: 0px;
 
@@ -228,6 +234,16 @@ img.morse { /* Hack */
 	    position: relative;
 	    vertical-align: middle;
 	}
+
+        @include media-query($on-palm) {
+            margin-bottom: 0.5em;
+            line-height: 0.75em;
+            margin-left: 0;
+        }
+    }
+
+    @include media-query($on-palm) {
+        text-align: center;
     }
 }
 
@@ -264,6 +280,9 @@ a.post-link {
 
     @include media-query($on-laptop) {
         font-size: 39px;
+        line-height: 1.25em;
+        margin-left: 0.25em;
+        text-indent: -0.25em;
     }
 }
 
@@ -297,11 +316,19 @@ a.post-link {
     p {
 	width: 640px;
 	padding-right: 34px;
+
+        @include media-query($on-palm) {
+            width: inherit;
+        }
     }
 
     blockquote p {
 	width: 570px;
 	line-height: 1.25em;
+
+        @include media-query($on-palm) {
+            width: inherit;
+        }
     }
 
     aside {
@@ -316,6 +343,11 @@ a.post-link {
 	border-bottom: dotted 1px;
 	border-top: dotted 1px;
 	padding: 5px;
+
+        @include media-query($on-palm) {
+            position: relative;
+            margin: 1em auto 1em auto;
+        }
 	
     }
 	
