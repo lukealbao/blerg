@@ -7,6 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://relevantish.com" # the base hostname & protocol for your site
 images: "/img"
 github_username:  lukealbao
+github_user: lukealbao
 
 
 
