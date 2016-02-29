@@ -3,7 +3,7 @@ title: Relevantish
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   A place for the loosely collected writings of the author. Novel, I know.
-baseurl: "http://lukealbao.github.io/blerg" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://lukealbao.github.io/blerg" # the base hostname & protocol for your site
 images: "/img"
 github_username:  lukealbao
